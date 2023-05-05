@@ -4,13 +4,16 @@ import java.util.ArrayList;
 public class Fibonacci {
 
     public static void main(String[] args) {
-        int fibIndex = 1;
+        int fibIndex = 15;
         int fibValue = findFibonacci(fibIndex);
         System.out.println("Fib(" + fibIndex + ")" + " is " + fibValue);
         System.out.println("O(n)");
     }
 
     public static int findFibonacci(int i) {
+        if (i == 0) {
+            return 0;
+        }
         ArrayList<Integer> fibo = new ArrayList<Integer>();
         fibo.add(1);
         fibo.add(1);
@@ -19,4 +22,5 @@ public class Fibonacci {
         }
         return fibo.get(i-1);
     }
+
 }
